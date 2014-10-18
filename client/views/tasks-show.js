@@ -24,3 +24,7 @@ Template.tasksShow.helpers({
 		return TaskTemplates.find({user_id: Meteor.userId()});
 	},
 });
+
+UI.registerHelper('runningTasks', function() {
+	return Tasks.find({running: true});
+});
