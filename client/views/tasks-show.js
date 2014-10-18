@@ -3,7 +3,7 @@ Template.tasksShow.events({
 		alert('quick start');
 	},
 	'click .add-template': function() {
-		alert('add template');
+		TaskTemplates.insert({name: 'Testing', desc: 'Whee?!'});
 	},
 	'click .task-template': function(evt) {
 		var tpl = TaskTemplates.findOne({user_id: Meteor.userId(), _id: $(evt.target).data('id')});
