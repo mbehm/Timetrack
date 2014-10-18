@@ -8,7 +8,6 @@ Template.tasksShow.events({
 	'click .task-template': function(evt) {
 		var tpl = TaskTemplates.findOne({user_id: Meteor.userId(), _id: $(evt.target).data('id')});
 		Tasks.insert({
-			user_id: Meteor.userId(),
 			name: tpl.name,
 			desc: tpl.desc,
 			running: true,
