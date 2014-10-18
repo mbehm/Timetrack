@@ -10,6 +10,7 @@ accounts-password
 mbehm:accounts-ui-bootstrap-3
 iron:router
 anti:i18n
-reywood:font-awesome-sass
 accounts-github
 accounts-google
+reywood:font-awesome-sass
+
