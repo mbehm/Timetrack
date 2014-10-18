@@ -1,13 +1,12 @@
 <template name="appBody">
-	{{> navigation}}
-	<div id="container" class="container">
-		{{#if currentUser}}
+	{{#if currentUser}}
+		{{> loggedInNavigation}}
+		<div id="container" class="container">
 			{{#each thisArray}}
 				{{> yield}}
 			{{/each}}
-		{{else}}
-			{{i18n "users.please_login_or_register"}}
-			{{> loginForm}}
-		{{/if}}
-	</div>
+		</div>
+	{{else}}
+		{{> login}}
+	{{/if}}
 </template>
