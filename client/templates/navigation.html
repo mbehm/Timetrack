@@ -9,6 +9,14 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="#">{{i18n "app.title"}}</a>
+				{{#if runningTasks}}
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">{{i18n "tasks.running_tasks"}} {{runningTasks.count}}</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				{{/if}}
 			</div>
 			{{#if currentUser}}
 			{{> loggedInNavigation}}
@@ -29,6 +37,9 @@
 <template name="loggedInNavigation">
 	<div class="navbar-collapse collapse">
 		<ul class="nav navbar-nav navbar-right">
+			{{#if runningTasks}}
+			<li><a>{{i18n "tasks.running_tasks"}} {{runningTasks.count}} <b class="caret"></b></a></li>
+			{{/if}}
 			{{> loginButtons}}
 		</ul>
 	</div>

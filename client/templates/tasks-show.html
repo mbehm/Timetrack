@@ -1,0 +1,13 @@
+<template name="tasksShow">
+	<div class="page tasks-show">
+		{{#each runningTasks}}
+			<button type="button" class="btn btn-default task" data-id="{{_id}}">{{name}}</button>
+		{{/each}}
+		<button type="button" class="btn btn-default quick-start">{{i18n "tasks.quick_start"}}</button>
+		<button type="button" class="btn btn-default add-template">{{i18n "tasks.add_template"}}</button>
+
+		{{#each templates}}
+			<button type="button" class="btn btn-default task-template" data-id="{{_id}}">{{name}}</button>
+		{{/each}}
+	</div>
+</template>
